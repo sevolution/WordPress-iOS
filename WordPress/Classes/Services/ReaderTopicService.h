@@ -5,6 +5,7 @@ extern NSString * const ReaderTopicDidChangeViaUserInteractionNotification;
 extern NSString * const ReaderTopicDidChangeNotification;
 
 @class ReaderTopic;
+@class ReaderSite;
 
 @interface ReaderTopicService : NSObject <LocalCoreDataService>
 
@@ -68,5 +69,13 @@ extern NSString * const ReaderTopicDidChangeNotification;
  @return A `ReaderTopic` instance or nil.
  */
 - (ReaderTopic *)topicForFollowedSites;
+
+/**
+ Fetch the topic for a single followed site.
+
+ @param site The ReaderSite of the topic to return.
+ @return A `ReaderTopic` instance.
+ */
+- (ReaderTopic *)topicForSite:(ReaderSite *)site;
 
 @end
