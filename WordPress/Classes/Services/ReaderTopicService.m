@@ -261,7 +261,7 @@ static NSString * const ReaderTopicCurrentTopicURIKey = @"ReaderTopicCurrentTopi
         NSEntityDescription *entity = [NSEntityDescription entityForName:@"ReaderTopic"
                                                   inManagedObjectContext:self.managedObjectContext];
         topic = [[ReaderTopic alloc] initWithEntity:entity
-                                  insertIntoManagedObjectContext:self.managedObjectContext];
+                     insertIntoManagedObjectContext:self.managedObjectContext];
     }
 
     topic.topicID = site.siteID;
